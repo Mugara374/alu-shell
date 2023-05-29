@@ -1,2 +1,10 @@
 #!/bin/bash
+echo "basics"
+ls -al
+cd ..
+echo "alu-shell"
+ls -al
+cd ..
+cd /boot
+echo "boot"
 ls -al
