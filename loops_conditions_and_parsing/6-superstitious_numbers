@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Bash Script that prints numbers 1 to 20 with special messages for 4, 9, and 17.
 Counter=1
 while [ "$Counter" -le 20 ];
     do
