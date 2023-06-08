@@ -6,8 +6,8 @@ do
   if [ $cont -eq 9 ]
   then
     echo "Hi"
-  fi
   else
   echo "Best School"
+  fi
   ((cont++))
 done
