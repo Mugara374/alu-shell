@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Bash script that displays Best School 10 times
 cont=0
 until [ $cont -eq 10 ];
 do
