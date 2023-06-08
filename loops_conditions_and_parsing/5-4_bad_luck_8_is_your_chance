@@ -10,7 +10,7 @@ echo "bad luck"
     then
 echo "good luck"
     else
-echo "Holberton School"
+echo "Best School"
     fi
     ((cont++))
 done
