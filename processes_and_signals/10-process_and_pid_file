@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
-# Creates the file /var/run/holbertonscript.pid containing its PID
-echo "$$" > /var/run/holbertonscript.pid
-trap "echo 'I hate the kill command'; rm /var/run/holbertonscript.pid; exit" SIGTERM
-trap "rm /var/run/holbertonscript.pid; exit" SIGQUIT
-trap "echo 'Y U no love me?!'" SIGINT
-while true; do
-      echo "To infinity and beyond"
-      sleep 2
+#do all the instructions
+#last directives
+cleanup (){
+	rm /var/run/myscript.pid
+	exit 0
+}
+
+
+
+#register the signal handler functions
+trap "echo 'I hate the kill command' && cleanup" SIGTERM
+trap "echo 'Y U no love me?'" SIGINT
+trap "cleanup" SIGQUIT
+#creates /var/run/myscript.pid containing its pid
+echo $$ > /var/run/myscript.pid
+#Displays to infinity and beyond indefinitely
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
 done
